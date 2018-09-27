@@ -1,22 +1,99 @@
-@import "reset";
+@font-face {
+    font-family: 'starwars';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/STARWARS.ttf');
+}
 
-body  {
+body {
+    font-family: starwars;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
     overflow: hidden;
-    .content {
-        height: 100vh;
-        width: 100vw;
-        background: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .text {
-            text-align: center;
-            color: #ffff10;
-            width: 40%;
-            transform: perspective(280px) rotateX(25deg);
-            position: absolute;
-            top: 100%;
-            animation-duration: 20s;
-        }
+    // Centrer
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notalong {
+    // Aspect
+    font-size: 32px;
+    color: #4bd5ee;
+    background: #000;
+    margin: auto;
+    opacity: 0;
+    animation-duration: 5s;
+    animation-name: a-long-time-ago;
+    animation-timing-function: ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    p {
+        display: block;
+    }
+}
+
+@keyframes a-long-time-ago {
+    0%   { opacity: 1; }
+    20%  { opacity: 1; }
+    80%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+.text {
+    // Positionnement
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    height: 100%;
+    // Aspect
+    color: #f1f100;
+    font-size: 62px;
+    text-align: justify;
+    // Transformation
+    transform-origin: center bottom;
+    transform: perspective(280px) rotateX(25deg);
+
+    h1 {
+        text-align: center;
+    }
+
+    & > div {
+    // pos
+    position: absolute;
+    top: 100%;
+    // animation
+    animation-delay: 6s;
+    animation-name: defile;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    }
+}
+
+@keyframes defile {
+    0% {
+        opacity: 1;
+        top: 100%;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        top: -250%;
+        opacity: 0;
     }
 }

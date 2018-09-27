@@ -12,17 +12,18 @@ p, ul {
 .content {
     height: 100vh;
     width: 100vw;
-    background: #cacaca;
+    background: #666;
     display: flex;
     align-items: center;
 }
 
-a {
+.nav_li>a {
     display: block;
     padding: 20px 25px;
     background: #7c7c7c;
     transition-property: background-color;
-    transition-duration: 1.5s;
+    transition-duration: 1s;
+    color: #e78e19;
     &:hover {
         background: #fff;
     }
@@ -34,6 +35,23 @@ ul {
 
 .nav_li {
     position: relative;
+    &:hover .submenu {
+        opacity: 1;
+        left: 100%;
+        background-color: #363636;
+    }
+
+    &>a {
+        display: block;
+        padding: 20px 25px;
+        background: #4e4e4e;
+        transition-property: background-color;
+        transition-duration: 1.5s;
+        color: #ff5900;
+        &:hover {
+            background: #fff;
+        }
+    }
 }
 
 .navbar {
@@ -41,6 +59,9 @@ ul {
 }
 
 .submenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     min-width: 100px;
     height: 100%;
@@ -50,13 +71,10 @@ ul {
     opacity: 0;
     transition-property: background-color opacity left;
     transition-duration: 1s;
-    p {
-        text-align: center;
+    a {
+        display: block;
+        padding: 5px;
+        text-decoration: none;
+        color: #fff;
     }
-}
-
-.nav_li:hover .submenu {
-    opacity: 1;
-    left: 100%;
-    background-color: #696969;
 }
