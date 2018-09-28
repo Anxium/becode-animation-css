@@ -46,7 +46,7 @@ ul {
     padding: 20px 25px;
     background: #4e4e4e;
     transition-property: background-color;
-    transition-duration: 1.5s;
+    transition-duration: 1s;
     color: #ff5900; }
     .nav_li > a:hover {
       background: #fff; }
@@ -59,16 +59,17 @@ ul {
   justify-content: center;
   align-items: center;
   position: absolute;
-  min-width: 100px;
+  min-width: 160px;
   height: 100%;
   z-index: -1;
   left: -100%;
   top: -0;
   opacity: 0;
   transition-property: background-color opacity left;
-  transition-duration: 1s; }
+  transition-duration: 0.3s; }
   .submenu a {
     display: block;
     padding: 5px;
     text-decoration: none;
-    color: #fff; }
+    color: #fff;
+    font-weight: 500; }

@@ -101,6 +101,7 @@ body {
 .button {
     // Position
     opacity: 0;
+    visibility: hidden;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -127,17 +128,21 @@ body {
 @keyframes button {
     0% {
         opacity: 0;
+        visibility: hidden;
     }
 
     10% {
         opacity: 1;
+        visibility: visible;
     }
 
     90% {
         opacity: 1;
+        visibility: visible;
     }
 
     100% {
         opacity: 0;
+        visibility: visible;
     }
 }
